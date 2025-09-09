@@ -18,14 +18,10 @@ import {
   Shield,
 } from 'lucide-react-native';
 import { Platform } from 'react-native';
-import { getUser, clearUser } from '@/lib/auth';
-import {
-  getNotificationSettings,
-  updateNotificationSettings,
-  registerForPushNotificationsAsync,
-} from '@/lib/notifications';
-import { exportData, importData } from '@/lib/storage';
-import { Toast } from '@/components/Toast';
+import { getUser, clearUser } from '../../lib/auth';
+import { getNotificationSettings, updateNotificationSettings, registerForPushNotificationsAsync } from '../../lib/notifications';
+import { exportData, importData } from '../../lib/storage';
+import { Toast } from '../../components/Toast';
 
 export default function SettingsScreen() {
   const [user, setUser] = useState(null);
