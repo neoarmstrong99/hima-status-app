@@ -14,13 +14,12 @@ import {
 } from 'react-native';
 import { useLocalSearchParams, router, useFocusEffect } from 'expo-router';
 import { ArrowLeft, Filter, UserPlus, Settings, Copy } from 'lucide-react-native';
-import { getUser } from '@/lib/auth';
-import { getGroupMembers, updateMemberStatus, updateTomorrowPlans } from '@/lib/database';
-import { supabase } from '@/lib/supabase';
-import { StatusBadge } from '@/components/StatusBadge';
-import { Toast } from '@/components/Toast';
-import { statusOptions, tomorrowPlanOptions, getExpirationTime, getTimeRemaining, isExpired } from '@/lib/statusManager';
-
+import { getUser } from '../../lib/auth';
+import { getGroupMembers, updateMemberStatus, updateTomorrowPlans } from '../../lib/database';
+import { supabase } from '../../lib/supabase';
+import { StatusBadge } from '../../components/StatusBadge';
+import { Toast } from '../../components/Toast';
+import { statusOptions, tomorrowPlanOptions, getExpirationTime, getTimeRemaining, isExpired } from '../../lib/statusManager';
 export default function GroupDetailScreen() {
   const { id: groupId } = useLocalSearchParams<{ id: string }>();
   const [user, setUser] = useState(null);
