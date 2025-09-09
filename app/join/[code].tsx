@@ -20,6 +20,7 @@ import { supabase } from '../../lib/supabase';
 import { StatusBadge } from '../../components/StatusBadge';
 import { Toast } from '../../components/Toast';
 import { statusOptions, tomorrowPlanOptions, getExpirationTime, getTimeRemaining, isExpired } from '../../lib/statusManager';
+
 export default function GroupDetailScreen() {
   const { id: groupId } = useLocalSearchParams<{ id: string }>();
   const [user, setUser] = useState(null);
