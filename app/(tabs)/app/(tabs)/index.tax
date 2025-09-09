@@ -14,9 +14,9 @@ import {
 } from 'react-native';
 import { router, useFocusEffect } from 'expo-router';
 import { Plus, Users, Clock } from 'lucide-react-native';
-import { getUser, setUser } from '@/lib/auth';
-import { createGroup, getUserGroups, getGroupMembers, getGroupByInviteCode } from '@/lib/database';
-import { Toast } from '@/components/Toast';
+import { getUser, setUser } from '../../lib/auth';
+import { createGroup, getUserGroups, getGroupMembers, getGroupByInviteCode } from '../../lib/database';
+import { Toast } from '../../components/Toast';
 
 export default function HomeScreen() {
   const [user, setUserState] = useState(null);
