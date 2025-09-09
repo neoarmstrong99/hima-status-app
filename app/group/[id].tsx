@@ -19,7 +19,6 @@ import { getGroupMembers, updateMemberStatus, updateTomorrowPlans } from '../../
 import { supabase } from '../../lib/supabase';
 import { StatusBadge } from '../../components/StatusBadge';
 import { statusOptions, tomorrowPlanOptions, getExpirationTime, getTimeRemaining, isExpired } from '../../lib/statusManager';
-import { statusOptions, tomorrowPlanOptions, getExpirationTime, getTimeRemaining, isExpired } from '@/lib/statusManager';
 
 export default function GroupDetailScreen() {
   const { id: groupId } = useLocalSearchParams<{ id: string }>();
